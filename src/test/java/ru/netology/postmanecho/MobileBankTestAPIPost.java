@@ -16,7 +16,7 @@ class MobileBankTestAPIPost {
                 .post("/post")
         .then()
                 .statusCode(200)
-                .body("data", equalTo("тест на кириллице"))
+                .body("data", equalTo("тест на кириллице провален"))
         ;
 
     }
