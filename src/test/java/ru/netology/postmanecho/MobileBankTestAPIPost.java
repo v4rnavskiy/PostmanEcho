@@ -15,7 +15,7 @@ class MobileBankTestAPIPost {
                 .post("/post")
         .then()
                 .statusCode(200)
-                .body("data", equalTo("when I start to understand something?"))
+                .body("data", equalTo("when I start to understand something"))
         ;
 
     }
