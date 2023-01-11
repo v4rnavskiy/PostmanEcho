@@ -10,12 +10,13 @@ class MobileBankTestAPIPost {
     void shouldReturnSomeData() {
         given()
                 .baseUri("https://postman-echo.com")
-                .body("when I start to understand something")
+                .contentType("text/plain; charset=UTF-8")
+                .body("тест на кириллице")
         .when()
                 .post("/post")
         .then()
                 .statusCode(200)
-                .body("data", equalTo("when I start to understand something"))
+                .body("data", equalTo("тест на кириллице"))
         ;
 
     }
